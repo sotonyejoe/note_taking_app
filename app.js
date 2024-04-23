@@ -8,9 +8,14 @@ const { v4 } = require("uuid");
 
 //mongodb connection
 mongoose
-    .connect("mongodb://127.0.0.1:27017/note_taking_app")
+    .connect("mongodb+srv://sotonye28:sotonyejoe23456@cluster0.ud0iuxa.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0note_taking_app")
     .then((value) => console.log("DB Connected"))
     .catch((reason) => console.log("DB Error"))
+
+    // mongodb+srv://sotonye28:sotonyejoe23456@cluster0.ud0iuxa.mongodb.net/
+ // new mongodb connection 
+
+
 
 
 const app = express();
