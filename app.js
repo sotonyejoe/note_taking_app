@@ -10,7 +10,7 @@ const { v4 } = require("uuid");
 mongoose
     .connect("mongodb+srv://sotonye28:sotonyejoe23456@cluster0.ud0iuxa.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0note_taking_app")
     .then((value) => console.log("DB Connected"))
-    .catch((reason) => console.log("DB Error"))
+    .catch((reason) => console.log("DB Error", reason))
 
     // mongodb+srv://sotonye28:sotonyejoe23456@cluster0.ud0iuxa.mongodb.net/
  // new mongodb connection 
