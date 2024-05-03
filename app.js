@@ -36,7 +36,7 @@ app.post("/create_user", async(req, res) => {
         res
         .status(400)
         .json({status: "error", message: "failed to create a user"})
-    }
+    }0
 });
 
 let sessions = {};
@@ -51,7 +51,6 @@ app.post("/login", async (req, res) =>{
     if(user){
       const token = v4();
       sessions[token] = username;
-      console.log(token);
 
       return res
       .status(200)
@@ -68,7 +67,7 @@ app.post("/login", async (req, res) =>{
 app.use((req, res, next) => {
   let token = req.headers["authorization"];
  
-  console.log(token);
+
   if(token){
     token = token.split("Bearer ")[1];
     const username = sessions[token];
