@@ -36,7 +36,7 @@ app.post("/create_user", async(req, res) => {
         res
         .status(400)
         .json({status: "error", message: "failed to create a user"})
-    }0
+    }
 });
 
 let sessions = {};
@@ -78,7 +78,7 @@ app.use((req, res, next) => {
     }else{
       res
        .status(401)
-       .json({status: "invalide-token", message: "login first"});
+       .json({status: "invalid-token", message: "login first"});
 
     }
   } else{
@@ -169,7 +169,6 @@ app.post("/notes", async(req, res) => {
   
   //update a note
   app.patch("/:id", async(req, res) => {
-    console.log("try")
     const { id } = req.params;
     const { title, content} = req.body;
 
